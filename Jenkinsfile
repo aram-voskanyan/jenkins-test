@@ -8,8 +8,8 @@ pipeline {
                     def commitId = "${scmVars.GIT_COMMIT.take(8)}"
                     sh 'echo ${commitId}'
                     
-                    def test = "aaabbbccc"
-                    sh 'echo ${test}'
+                    def test = 'aaabbbccc'
+                    echo ${test}
                 }
 
                 sh 'echo --- executing pipeline ---'
