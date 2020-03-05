@@ -9,7 +9,7 @@ pipeline {
                     sh 'echo ${commitId}'
                     
                     def test = 'aaabbbccc'
-                    echo ${test}
+                    echo "${test}"
                 }
 
                 sh 'echo --- executing pipeline ---'
