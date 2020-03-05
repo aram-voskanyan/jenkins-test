@@ -15,8 +15,7 @@ pipeline {
                     //echo "${commitId}"
                     //sh 'echo --- executing pipeline ---'
                     //sh 'echo ${branch}'
-                    sh 'echo ===${testVar}'
-                    sh 'echo ***${env.testVar}'
+                    sh 'echo ${testVar}'
                 }
             }
         }
