@@ -7,11 +7,9 @@ pipeline {
                     def scmVars = checkout scm
                     def commitId = "${scmVars.GIT_COMMIT.take(8)}"
                     echo "${commitId}"
+                    sh 'echo --- executing pipeline ---'
+                    sh 'echo ${branch}'
                 }
-    
-                echo "*---  ${commitId}"
-                sh 'echo --- executing pipeline ---'
-                sh 'echo ${branch}'
             }
         }
     }
