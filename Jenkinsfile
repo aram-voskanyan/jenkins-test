@@ -9,7 +9,11 @@ pipeline {
                 script {
                     //def scmVars = checkout scm
                     //def commitId = "${scmVars.GIT_COMMIT.take(8)}"
-                    def version = sh 'npm run version --silent'
+                    def version = sh '$(cat package.json \
+                        | grep version \
+                        | head -1 \
+                        | awk -F: '{ print $2 }' \
+                        | sed 's/[",]//g')'
                     
                     echo "${version}"
                     //echo "${commitId}"
