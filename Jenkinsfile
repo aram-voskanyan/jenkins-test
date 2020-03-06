@@ -10,7 +10,7 @@ pipeline {
                     //def scmVars = checkout scm
                     //def commitId = "${scmVars.GIT_COMMIT.take(8)}"
                     def version = sh (
-                        script: 'bash ./package-version.sh ./package.json'
+                        script: 'bash ./package-version.sh ./package.json',
                         returnStdout: true
                     ).trim()    
                     
