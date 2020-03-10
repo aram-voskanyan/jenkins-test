@@ -17,7 +17,7 @@ pipeline {
                     echo "${version}"
                     //echo "${commitId}"
                     //sh 'echo --- executing pipeline ---'
-                    //sh 'echo ${branch}'
+                    sh 'echo ${branch}'
                     //sh 'echo ${testVar}'
                 }
             }
