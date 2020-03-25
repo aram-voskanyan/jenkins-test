@@ -17,10 +17,10 @@ pipeline {
                     echo "${version}"
                     //echo "${commitId}"
                     //sh 'echo --- executing pipeline ---'
-                    if (${branch} == 'master') {
-                        sh 'echo ${branch} ----------'
+                    if ("${branch}" == 'master') {
+                        sh 'echo  ----------'
                     } else {
-                        sh 'echo ${branch} ++++++++++'
+                        sh 'echo  ++++++++++'
                     }
                     
                     //sh 'echo ${testVar}'
