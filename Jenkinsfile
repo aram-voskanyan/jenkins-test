@@ -23,6 +23,10 @@ pipeline {
                         sh 'echo  ++++++++++'
                     }
                     
+                    sh "echo A=${branch} > .env"
+                    sh "echo B=${version} >> .env"
+                    sh "cat .env"
+                    
                     //sh 'echo ${testVar}'
                 }
             }
