@@ -17,7 +17,12 @@ pipeline {
                     echo "${version}"
                     //echo "${commitId}"
                     //sh 'echo --- executing pipeline ---'
-                    sh 'echo ${branch}'
+                    if (${branch} === 'master') {
+                        sh 'echo ${branch} ----------'
+                    } else {
+                        sh 'echo ${branch} ++++++++++'
+                    }
+                    
                     //sh 'echo ${testVar}'
                 }
             }
