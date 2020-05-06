@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
+                    sh 'ls -alhR'
                     sh 'npm i'
                 }
             }
