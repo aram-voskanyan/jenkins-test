@@ -1,13 +1,10 @@
-pipeline {
-    agent any
-    stages {
-        stage('build') {
-            docker.image('FROM mhart/alpine-node:8.16').inside{
-                withEnv(["Home=/tmp"]){
-                    sh 'npm i'
-                    sh 'npm test'
-                }
-            }
+node {
+    stage('Checkout') {
+        checkout scm
+    }
+    stage('build') {
+        docker.image('FROM mhart/alpine-node:8.16').inside{
+            sh 'ls -alh'
         }
     }
 }
