@@ -3,7 +3,7 @@ node {
         checkout scm
     }
     stage('build') {
-        docker.image('FROM mhart/alpine-node:8.16').inside{
+        docker.image('node:10.9.0-alpine').inside(' -u 0'){
             sh 'ls -alh'
         }
     }
